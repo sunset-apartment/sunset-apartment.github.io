@@ -3,281 +3,455 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tomi Apartment</title>
-  <meta name="description" content="Minimalista apartman kiadó rövid és hosszú távra." />
+  <title>Cirkáló Apartman | Balaton parti apartman Siófokon</title>
+  <meta name="description" content="Balaton parti, felújított apartman közvetlenül a vízparton Siófok Ezüstparton. Panorámás erkély, wifi, parkoló, teljes felszereltség." />
+  <meta property="og:title" content="Cirkáló Apartman | Balaton parti apartman Siófokon" />
+  <meta property="og:description" content="Felújított, teljesen felszerelt apartman közvetlenül a Balaton partján, Siófok Ezüstparton." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="images/apartman-00.jpg" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <script defer src="assets/js/calendar-config.js"></script>
+  <script defer src="assets/js/app.js"></script>
+
   <style>
-    :root {
-      --bg: #f7f7f5;
-      --card: #ffffff;
-      --text: #1f1f1f;
-      --muted: #666;
-      --line: #e7e7e7;
-      --accent: #111;
-      --max: 960px;
-      --radius: 18px;
+    .gallery-grid img[data-swap-image] {
+      cursor: pointer;
     }
 
-    * {
-      box-sizing: border-box;
+    .gallery-grid figure:has(img[data-swap-image]) {
+      position: relative;
     }
 
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.6;
-    }
-
-    .container {
-      width: min(92%, var(--max));
-      margin: 0 auto;
-    }
-
-    header {
-      padding: 28px 0;
-    }
-
-    .nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 16px;
-      flex-wrap: wrap;
-    }
-
-    .brand {
-      font-size: 1.2rem;
-      font-weight: 700;
-      text-decoration: none;
-      color: var(--text);
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 18px;
-      flex-wrap: wrap;
-    }
-
-    .nav-links a {
-      text-decoration: none;
-      color: var(--muted);
-      font-size: 0.95rem;
-    }
-
-    .hero {
-      padding: 36px 0 28px;
-    }
-
-    .hero-card {
-      background: var(--card);
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      padding: 52px 28px;
-    }
-
-    h1, h2, h3 {
-      margin-top: 0;
-      line-height: 1.15;
-    }
-
-    h1 {
-      font-size: clamp(2rem, 5vw, 4rem);
-      margin-bottom: 16px;
-    }
-
-    .lead {
-      font-size: 1.1rem;
-      color: var(--muted);
-      max-width: 680px;
-      margin-bottom: 28px;
-    }
-
-    .actions {
-      display: flex;
-      gap: 12px;
-      flex-wrap: wrap;
-    }
-
-    .btn {
-      display: inline-block;
-      padding: 14px 20px;
+    .gallery-grid figure:has(img[data-swap-image])::after {
+      content: "↔";
+      position: absolute;
+      right: 12px;
+      top: 12px;
+      width: 34px;
+      height: 34px;
+      display: grid;
+      place-items: center;
       border-radius: 999px;
-      text-decoration: none;
-      border: 1px solid var(--accent);
-      transition: 0.2s ease;
-      font-weight: 600;
-    }
-
-    .btn-primary {
-      background: var(--accent);
-      color: white;
-    }
-
-    .btn-secondary {
-      background: transparent;
-      color: var(--accent);
-    }
-
-    section {
-      padding: 26px 0;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 18px;
-    }
-
-    .card {
-      background: var(--card);
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      padding: 24px;
-    }
-
-    .gallery {
-      display: grid;
-      grid-template-columns: 2fr 1fr 1fr;
-      gap: 14px;
-    }
-
-    .photo {
-      background: #ddd;
-      border-radius: var(--radius);
-      min-height: 220px;
-      background-size: cover;
-      background-position: center;
-      border: 1px solid var(--line);
-    }
-
-    .photo.large {
-      min-height: 460px;
-    }
-
-    .muted {
-      color: var(--muted);
-    }
-
-    .price {
-      font-size: 1.6rem;
+      background: rgba(255, 255, 255, 0.88);
+      color: #1f1f1f;
       font-weight: 700;
-      margin: 8px 0 0;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.16);
+      pointer-events: none;
     }
 
-    footer {
-      padding: 40px 0 60px;
-      color: var(--muted);
-      font-size: 0.95rem;
-      text-align: center;
-    }
-
-    @media (max-width: 820px) {
-      .grid,
-      .gallery {
-        grid-template-columns: 1fr;
-      }
-
-      .photo.large {
-        min-height: 280px;
-      }
-
-      .photo {
-        min-height: 220px;
-      }
-
-      .hero-card {
-        padding: 34px 22px;
-      }
+    .gallery-grid img[data-swap-image]:focus-visible {
+      outline: 3px solid #1f1f1f;
+      outline-offset: 4px;
     }
   </style>
 </head>
 <body>
-  <header class="container">
-    <nav class="nav">
-      <a href="#" class="brand">Tomi Apartment</a>
-      <div class="nav-links">
-        <a href="#about">Lakás</a>
-        <a href="#gallery">Képek</a>
-        <a href="#details">Részletek</a>
-        <a href="#contact">Kapcsolat</a>
+  <a class="skip-link" href="#main" data-i18n="common.skip">Ugrás a tartalomra</a>
+
+  <header class="site-header">
+    <nav class="container nav" aria-label="Main navigation">
+      <a href="#top" class="brand" aria-label="Cirkáló Apartman kezdőlap">
+        <span class="brand-mark">CA</span>
+        <span data-i18n="brand.name">Cirkáló Apartman</span>
+      </a>
+
+      <div class="nav-right">
+        <div class="nav-links" aria-label="Oldal szekciók">
+          <a href="#about" data-i18n="nav.about">Apartman</a>
+          <a href="#prices" data-i18n="nav.prices">Árak</a>
+          <a href="#gallery" data-i18n="nav.gallery">Képek</a>
+          <a href="#availability" data-i18n="nav.availability">Foglaltság</a>
+          <a href="#location" data-i18n="nav.location">Helyszín</a>
+          <a href="#contact" data-i18n="nav.contact">Kapcsolat</a>
+        </div>
+
+        <div class="language-switcher" aria-label="Nyelvválasztó">
+          <button type="button" data-lang="hu" data-url-lang="hu" aria-pressed="true">HU</button>
+          <button type="button" data-lang="en" data-url-lang="en" aria-pressed="false">EN</button>
+          <button type="button" data-lang="de" data-url-lang="de" aria-pressed="false">DE</button>
+          <button type="button" data-lang="it" data-url-lang="it" aria-pressed="false">IT</button>
+        </div>
       </div>
     </nav>
   </header>
 
-  <main>
-    <section class="hero container">
-      <div class="hero-card">
-        <h1>Minimalista apartman<br>kiadó Budapest szívében</h1>
-        <p class="lead">
-          Csendes, világos, igényesen berendezett lakás rövid vagy hosszú távra.
-          Ideális egy főnek vagy párnak.
-        </p>
+  <main id="main" class="site-main">
+    <section id="top" class="container hero">
+      <div class="hero-copy">
+        <p class="eyebrow" data-i18n="hero.eyebrow">Kiadó apartman • Siófok Ezüstpart</p>
+        <h1 data-i18n="hero.title">Balaton parti felújított apartman közvetlenül a vízparton</h1>
+        <p class="lead" data-i18n="hero.lead">Az erkélyről csodálhatod a panorámát és a napnyugtát a vízen. Teljesen felszerelt, felújított apartman amerikai konyhás nappalival, hálóval és dupla erkéllyel.</p>
         <div class="actions">
-          <a class="btn btn-primary" href="#contact">Érdeklődöm</a>
-          <a class="btn btn-secondary" href="#details">Részletek</a>
+          <a class="btn btn-primary" href="#contact" data-i18n="hero.primary">Érdeklődöm</a>
+          <a class="btn btn-secondary" href="#availability" data-i18n="hero.secondary">Foglaltság megtekintése</a>
+        </div>
+      </div>
+
+      <div class="hero-media">
+        <img src="images/apartman-00.jpg" alt="Balatoni panoráma a Cirkáló Apartman erkélyéről" onerror="this.closest('.hero-media').classList.add('missing-image')" />
+        <div class="hero-placeholder">
+          <strong data-i18n="hero.photoPlaceholderTitle">Fő kép helye</strong>
+          <span data-i18n="hero.photoPlaceholderText">Tedd ide: images/apartman-00.jpg</span>
+        </div>
+        <div class="hero-badge" aria-label="Apartman kiemelt adatai">
+          <div class="mini-stat">
+            <strong data-i18n="stats.water.value">Vízpart</strong>
+            <span data-i18n="stats.water.label">Szabadstrand a ház előtt</span>
+          </div>
+          <div class="mini-stat">
+            <strong data-i18n="stats.stay.value">Min. 2 éj</strong>
+            <span data-i18n="stats.stay.label">Rövid pihenésre is</span>
+          </div>
+          <div class="mini-stat">
+            <strong data-i18n="stats.parking.value">1 autó</strong>
+            <span data-i18n="stats.parking.label">Zárt udvari parkoló</span>
+          </div>
         </div>
       </div>
     </section>
 
-    <section id="about" class="container">
-      <div class="grid">
-        <div class="card">
-          <h2>Elhelyezkedés</h2>
-          <p class="muted">Budapest, belváros / kerület / utca</p>
+    <section id="about" class="container section-pad">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow" data-i18n="about.eyebrow">Áttekintés</p>
+          <h2 data-i18n="about.title">Panoráma, vízpart és kényelmes balatoni pihenés</h2>
         </div>
-        <div class="card">
-          <h2>Méret</h2>
-          <p class="muted">45 m², 2 szoba</p>
+        <p data-i18n="about.text">A Cirkáló Apartman Siófokon, a Balatonszéplak–Ezüstpart városrészben található, egy liftes ház 5. emeletén, közvetlenül a Balaton partján. Ideális választás pároknak, családoknak és mindenkinek, aki tóparti környezetben szeretne kikapcsolódni.</p>
+      </div>
+
+      <div class="grid-3">
+        <article class="card">
+          <div class="icon">🌅</div>
+          <h3 data-i18n="cards.panorama.title">Balatoni panoráma</h3>
+          <p class="muted" data-i18n="cards.panorama.text">A dupla erkélyről gyönyörű kilátás nyílik a Balatonra, esténként pedig a vízen tükröződő naplementét is élvezheted.</p>
+        </article>
+        <article class="card">
+          <div class="icon">🏖️</div>
+          <h3 data-i18n="cards.beach.title">Közvetlen vízpart</h3>
+          <p class="muted" data-i18n="cards.beach.text">A szabadstrand közvetlenül a ház előtt található, így néhány lépés után már a Balaton partján vagy.</p>
+        </article>
+        <article class="card">
+          <div class="icon">🚲</div>
+          <h3 data-i18n="cards.programs.title">Programok közelben</h3>
+          <p class="muted" data-i18n="cards.programs.text">Éttermek, bicikliút, horgászási lehetőség és a déli part pezsgő balatoni programjai karnyújtásnyira vannak.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="prices" class="container section-pad">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow" data-i18n="prices.eyebrow">Árak</p>
+          <h2 data-i18n="prices.title">Napi árak szezon szerint</h2>
         </div>
-        <div class="card">
-          <h2>Ár</h2>
-          <p class="price">180 000 Ft / hó</p>
+        <p data-i18n="prices.text">Az apartman minimum 2 éjszakára foglalható. Az ágynemű a bérlésben benne van. A pontos dátumokat és a szabad időszakokat érdeklődéskor egyeztetjük.</p>
+      </div>
+
+      <div class="price-grid">
+        <article class="price-card">
+          <p class="price-label" data-i18n="prices.pre.label">Elő- és utószezon</p>
+          <p class="price">75 EUR <span data-i18n="prices.perNight">/ éj</span></p>
+          <p class="muted" data-i18n="prices.pre.text">Kedvező ár a nyugodtabb balatoni pihenéshez.</p>
+        </article>
+        <article class="price-card featured">
+          <p class="price-label" data-i18n="prices.main.label">Főszezon</p>
+          <p class="price">210 EUR <span data-i18n="prices.perNight2">/ éj</span></p>
+          <p class="muted" data-i18n="prices.main.text">Július 1. – augusztus 31. között érvényes ár.</p>
+        </article>
+        <article class="price-card">
+          <p class="price-label" data-i18n="prices.included.label">Tartalmazza</p>
+          <h3 data-i18n="prices.included.title">Ágynemű + alapfelszereltség</h3>
+          <p class="muted" data-i18n="prices.included.text">Wifi, mosógép, felszerelt konyha, légkondi és 1 autó részére parkoló a zárt belső udvarban.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="gallery" class="container section-pad">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow" data-i18n="gallery.eyebrow">Galéria</p>
+          <h2 data-i18n="gallery.title">Képek az apartmanról és a panorámáról</h2>
+        </div>
+      </div>
+
+      <div class="gallery-grid">
+        <figure><img src="images/apartman-01.jpg" data-swap-image data-alt-src="images/apartman-01b.jpg" tabindex="0" role="button" alt="Erkélyek" onerror="this.closest('figure').classList.add('missing-image')" /><figcaption data-i18n="gallery.cap1">Erkélyek</figcaption></figure>
+        <figure><img src="images/apartman-02.jpg" data-swap-image data-alt-src="images/apartman-02b.jpg" tabindex="0" role="button" alt="Amerikai konyhás nappali" onerror="this.closest('figure').classList.add('missing-image')" /><figcaption data-i18n="gallery.cap2">Amerikai konyhás nappali</figcaption></figure>
+        <figure><img src="images/apartman-03.jpg" data-swap-image data-alt-src="images/apartman-03b.jpg" tabindex="0" role="button" alt="Hálószoba" onerror="this.closest('figure').classList.add('missing-image')" /><figcaption data-i18n="gallery.cap3">Hálószoba</figcaption></figure>
+        <figure><img src="images/apartman-04.jpg" data-swap-image data-alt-src="images/apartman-04b.jpg" tabindex="0" role="button" alt="Erkélyek" onerror="this.closest('figure').classList.add('missing-image')" /><figcaption data-i18n="gallery.cap4">Erkélyek</figcaption></figure>
+        <figure><img src="images/apartman-05.jpg" data-swap-image data-alt-src="images/apartman-05b.jpg" tabindex="0" role="button" alt="Fürdőszoba" onerror="this.closest('figure').classList.add('missing-image')" /><figcaption data-i18n="gallery.cap5">Fürdőszoba</figcaption></figure>
+        <figure><img src="images/apartman-06.jpg" data-swap-image data-alt-src="images/apartman-06b.jpg" tabindex="0" role="button" alt="Felszerelt konyha" onerror="this.closest('figure').classList.add('missing-image')" /><figcaption data-i18n="gallery.cap6">Felszerelt konyha</figcaption></figure>
+        <figure><img src="images/apartman-07.jpg" data-swap-image data-alt-src="images/apartman-07b.jpg" tabindex="0" role="button" alt="Szabadstrand a ház előtt" onerror="this.closest('figure').classList.add('missing-image')" /><figcaption data-i18n="gallery.cap7">Szabadstrand a ház előtt</figcaption></figure>
+        <figure><img src="images/apartman-08.jpg" data-swap-image data-alt-src="images/apartman-08b.jpg" tabindex="0" role="button" alt="Sport a parton" data-l10n-alt="gallery.sportAlt" onerror="this.closest('figure').classList.add('missing-image')" /><figcaption data-l10n-extra="gallery.sport">Sport a parton</figcaption></figure>
+        <figure><img src="images/apartman-09.jpg" data-swap-image data-alt-src="images/apartman-09b.jpg" tabindex="0" role="button" alt="Naplemente a Balatonon" data-l10n-alt="gallery.sunsetAlt" onerror="this.closest('figure').classList.add('missing-image')" /><figcaption data-l10n-extra="gallery.sunset">Naplemente a vízen</figcaption></figure>
+      </div>
+    </section>
+ 
+    <section id="details" class="container section-pad">
+      <div class="grid-2">
+        <article class="card">
+          <p class="eyebrow" data-i18n="details.eyebrow">Részletek</p>
+          <h2 data-i18n="details.title">Apartman adatai</h2>
+          <ul class="detail-list">
+            <li><strong data-i18n="details.layout.label">Elrendezés</strong><span data-i18n="details.layout.value">1 háló + amerikai konyhás nappali</span></li>
+            <li><strong data-i18n="details.floor.label">Emelet</strong><span data-i18n="details.floor.value">5. emelet, liftes ház</span></li>
+            <li><strong data-i18n="details.balcony.label">Erkély</strong><span data-i18n="details.balcony.value">Dupla erkély balatoni kilátással</span></li>
+            <li><strong data-i18n="details.stay.label">Minimum tartózkodás</strong><span data-i18n="details.stay.value">2 éjszaka</span></li>
+            <li><strong data-i18n="details.linen.label">Ágynemű</strong><span data-i18n="details.linen.value">Benne van a bérlésben</span></li>
+            <li><strong data-i18n="details.parking.label">Parkolás</strong><span data-i18n="details.parking.value">1 autónak zárt belső udvarban</span></li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <p class="eyebrow" data-i18n="amenities.eyebrow">Felszereltség</p>
+          <h2 data-i18n="amenities.title">Kényelmi extrák</h2>
+          <ul class="amenities-list">
+            <li><strong>Wi‑Fi</strong><span data-i18n="amenities.wifi">Internetkapcsolat</span></li>
+            <li><strong data-i18n="amenities.cooling.label">Légkondi</strong><span data-i18n="amenities.cooling.value">Kellemes hőmérséklet nyáron is</span></li>
+            <li><strong data-i18n="amenities.kitchen.label">Konyha</strong><span data-i18n="amenities.kitchen.value">Sütő, mikrohullámú sütő, hűtő, főzőlap</span></li>
+            <li><strong data-i18n="amenities.washing.label">Mosás</strong><span data-i18n="amenities.washing.value">Mosógép</span></li>
+            <li><strong data-i18n="amenities.tv.label">Szórakozás</strong><span data-i18n="amenities.tv.value">Síkképernyős TV</span></li>
+            <li><strong data-i18n="amenities.privacy.label">Komfort</strong><span data-i18n="amenities.privacy.value">Privát bejárat, hangszigetelés</span></li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="container section-pad family-section">
+      <div class="family-card">
+        <div>
+          <p class="eyebrow" data-i18n="family.eyebrow">Családbarát</p>
+          <h2 data-i18n="family.title">Gyerekekkel is kényelmes választás</h2>
+          <p class="muted" data-i18n="family.text">A házhoz tartozó parkban játszótér található, a ház előtti szabadstrand pedig családos nyaralásnál különösen praktikus. A környék biciklizésre, sétára és balatoni programokra is ideális.</p>
+        </div>
+        <ul class="check-list">
+          <li data-i18n="family.item1">Játszótér a ház parkjában</li>
+          <li data-i18n="family.item2">Szabadstrand közvetlenül az épület előtt</li>
+          <li data-i18n="family.item3">Bicikliút a közelben</li>
+          <li data-i18n="family.item4">Éttermek és kisbolt a közelben</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="availability" class="container section-pad">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow" data-i18n="availability.eyebrow">Foglaltság</p>
+          <h2 data-i18n="availability.title">Szabad időpontok naptárban</h2>
+        </div>
+        <p data-i18n="availability.text">A naptárban a foglalt időszakok jelennek meg. Érdeklődés előtt ellenőrizheted a kívánt dátumokat, majd üzenetben egyeztetjük a részleteket.</p>
+      </div>
+
+      <div class="calendar-card">
+        <button class="calendar-toggle" type="button" data-calendar-toggle aria-expanded="false" aria-controls="availability-calendar-panel">
+          <span data-calendar-toggle-label>Foglaltsági naptár megnyitása</span>
+          <span class="calendar-toggle-icon" aria-hidden="true">⌄</span>
+        </button>
+
+        <div id="availability-calendar-panel" class="calendar-frame" data-calendar hidden>
+          <div class="calendar-empty">
+            <h3 data-i18n="availability.emptyTitle">A naptár még nincs beállítva</h3>
+            <p data-i18n="availability.emptyText">A foglalt napokat az assets/js/calendar-config.js fájlban tudod dátumonként megadni.</p>
+          </div>
         </div>
       </div>
     </section>
 
-    <section id="gallery" class="container">
-      <h2>Képek</h2>
-      <div class="gallery">
-        <div class="photo large" style="background-image: url('https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1200&q=80');"></div>
-        <div class="photo" style="background-image: url('https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&w=900&q=80');"></div>
-        <div class="photo" style="background-image: url('https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=900&q=80');"></div>
+    <section id="location" class="container section-pad">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow" data-i18n="location.eyebrow">Helyszín</p>
+          <h2 data-i18n="location.title">Siófok, Ezüstpart – közvetlenül a Balatonnál</h2>
+        </div>
+        <p data-i18n="location.text">Az apartman a Balaton pezsgő, programokkal teli déli partján, csodás környezetben található. A vasútállomás körülbelül 800 méterre van, buszmegálló pedig a közelben található.</p>
+      </div>
+
+      <div class="map-box">
+        <div class="map-card">
+          <h3 data-i18n="location.card.title">Balatonszéplak–Ezüstpart, Siófok</h3>
+          <p class="muted" data-i18n="location.card.text">Siófok Beach kb. 1,3 km, a Bebo Aquapark kb. 7,6 km, a Hévíz–Balaton Airport kb. 84 km távolságra található. A pontos címet foglaláskor vagy érdeklődéskor lehet egyeztetni.</p>
+          <a class="btn btn-secondary" href="https://maps.google.com/?q=Siófok%20Ezüstpart" target="_blank" rel="noopener" data-i18n="location.button">Megnyitás térképen</a>
+        </div>
       </div>
     </section>
 
-    <section id="details" class="container">
-      <div class="card">
-        <h2>Részletek</h2>
-        <p>
-          A lakás teljesen bútorozott, gépesített, világos és csendes.
-          Közel tömegközlekedéshez, boltokhoz, kávézókhoz.
-        </p>
-        <p>
-          <strong>Felszereltség:</strong> wifi, mosógép, hűtő, sütő, légkondi
-        </p>
-        <p>
-          <strong>Bérlés:</strong> minimum 1 hónap / azonnal költözhető
-        </p>
-      </div>
-    </section>
-
-    <section id="contact" class="container">
-      <div class="card">
-        <h2>Kapcsolat</h2>
-        <p>Érdeklődni itt tudsz:</p>
-        <p><strong>Email:</strong> <a href="mailto:tomi.apartment.rent@gmail.com">tomi.apartment.rent@gmail.com</a></p>
-        <p><strong>Telefon:</strong> +36 30 123 4567</p>
+    <section id="contact" class="container section-pad">
+      <div class="contact-card">
+        <div>
+          <p class="eyebrow" data-i18n="contact.eyebrow">Kapcsolat</p>
+          <h2 data-i18n="contact.title">Érdekel az apartman?</h2>
+          <p class="muted" data-i18n="contact.text">Írd meg a kívánt dátumot, az éjszakák számát és az érkezők számát. A szabad időpontot, a végleges feltételeket és a közvetlen elérhetőséget válaszban egyeztetjük.</p>
+        </div>
+        <div class="contact-links">
+          <a href="mailto:cirkalo.apartman@example.com?subject=Cirkáló%20Apartman%20érdeklődés">
+            <span data-i18n="contact.email">Email küldése</span>
+            <span>→</span>
+          </a>
+        </div>
       </div>
     </section>
   </main>
 
-  <footer class="container">
-    © 2026 Tomi Apartment
+  <footer class="container footer">
+    <div class="footer-inner">
+      <span>© <span id="year"></span> <span data-i18n="brand.name">Cirkáló Apartman</span></span>
+      <span data-i18n="footer.note">Statikus GitHub Pages oldal</span>
+    </div>
   </footer>
+
+  <script>
+    (function () {
+      const urlToLang = {
+        hu: "hu",
+        hun: "hu",
+        magyar: "hu",
+        en: "en",
+        eng: "en",
+        english: "en",
+        de: "de",
+        deu: "de",
+        ger: "de",
+        german: "de",
+        it: "it",
+        ita: "it",
+        italian: "it"
+      };
+
+      const langToUrl = {
+        hu: "hu",
+        en: "en",
+        de: "de",
+        it: "it"
+      };
+
+      const extraTranslations = {
+        hu: {
+          "gallery.sport": "Sport a parton",
+          "gallery.sportAlt": "Sport a parton",
+          "gallery.sunset": "Naplemente a vízen",
+          "gallery.sunsetAlt": "Naplemente a Balatonon"
+        },
+        en: {
+          "gallery.sport": "Sports by the beach",
+          "gallery.sportAlt": "Sports by the beach",
+          "gallery.sunset": "Sunset over the water",
+          "gallery.sunsetAlt": "Sunset over Lake Balaton"
+        },
+        de: {
+          "gallery.sport": "Sport am Strand",
+          "gallery.sportAlt": "Sport am Strand",
+          "gallery.sunset": "Sonnenuntergang über dem Wasser",
+          "gallery.sunsetAlt": "Sonnenuntergang am Balaton"
+        },
+        it: {
+          "gallery.sport": "Sport sulla spiaggia",
+          "gallery.sportAlt": "Sport sulla spiaggia",
+          "gallery.sunset": "Tramonto sull’acqua",
+          "gallery.sunsetAlt": "Tramonto sul Balaton"
+        }
+      };
+
+      function normalizeLang(value) {
+        if (!value) return "hu";
+        return urlToLang[String(value).trim().toLowerCase()] || "hu";
+      }
+
+      function updateLangInUrl(lang) {
+        const next = new URL(window.location.href);
+        next.searchParams.set("lang", langToUrl[lang] || "hu");
+        window.history.replaceState(null, "", next.pathname + next.search + next.hash);
+      }
+
+      function updateLanguageButtons(lang) {
+        document.querySelectorAll("[data-lang]").forEach(function (button) {
+          button.setAttribute("aria-pressed", button.dataset.lang === lang ? "true" : "false");
+        });
+      }
+
+      function applyExtraTranslations(lang) {
+        const dictionary = extraTranslations[lang] || extraTranslations.hu;
+
+        document.querySelectorAll("[data-l10n-extra]").forEach(function (element) {
+          const key = element.dataset.l10nExtra;
+          if (dictionary[key]) element.textContent = dictionary[key];
+        });
+
+        document.querySelectorAll("[data-l10n-alt]").forEach(function (image) {
+          const key = image.dataset.l10nAlt;
+          if (dictionary[key]) image.setAttribute("alt", dictionary[key]);
+        });
+      }
+
+      function activateLanguageFromUrl() {
+        const params = new URLSearchParams(window.location.search);
+        const hasLangParam = params.has("lang");
+        const lang = normalizeLang(params.get("lang"));
+
+        document.documentElement.lang = lang;
+        updateLanguageButtons(lang);
+        applyExtraTranslations(lang);
+
+        if (hasLangParam) {
+          updateLangInUrl(lang);
+        }
+
+        if (hasLangParam && lang !== "hu") {
+          const button = document.querySelector(`[data-lang="${lang}"]`);
+          if (button) button.click();
+        }
+      }
+
+      document.addEventListener("click", function (event) {
+        const languageButton = event.target.closest("[data-lang]");
+        if (!languageButton) return;
+
+        const lang = normalizeLang(languageButton.dataset.lang);
+        document.documentElement.lang = lang;
+        updateLanguageButtons(lang);
+        updateLangInUrl(lang);
+        window.setTimeout(function () {
+          applyExtraTranslations(lang);
+        }, 0);
+      });
+
+      function setupGalleryImageSwap() {
+        document.querySelectorAll("[data-swap-image]").forEach(function (image) {
+          const originalSrc = image.getAttribute("src");
+          const alternateSrc = image.dataset.altSrc;
+
+          if (!originalSrc || !alternateSrc) return;
+
+          image.dataset.originalSrc = originalSrc;
+          image.dataset.showingAlt = "false";
+
+          const preload = new Image();
+          preload.src = alternateSrc;
+
+          function toggleImage() {
+            const showingAlt = image.dataset.showingAlt === "true";
+            image.src = showingAlt ? image.dataset.originalSrc : alternateSrc;
+            image.dataset.showingAlt = showingAlt ? "false" : "true";
+          }
+
+          image.addEventListener("click", toggleImage);
+
+          image.addEventListener("keydown", function (event) {
+            if (event.key === "Enter" || event.key === " ") {
+              event.preventDefault();
+              toggleImage();
+            }
+          });
+        });
+      }
+
+      window.addEventListener("load", function () {
+        activateLanguageFromUrl();
+        setupGalleryImageSwap();
+      });
+
+      window.addEventListener("popstate", activateLanguageFromUrl);
+    })();
+  </script>
+
 </body>
 </html>
