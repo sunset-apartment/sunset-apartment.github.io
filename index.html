@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Cirkáló Apartman | Balaton parti apartman Siófokon</title>
+  <title>Sunset Apartman | Balaton parti apartman Siófokon</title>
   <meta name="description" content="Balaton parti, felújított apartman közvetlenül a vízparton Siófok Ezüstparton. Panorámás erkély, wifi, parkoló, teljes felszereltség." />
-  <meta property="og:title" content="Cirkáló Apartman | Balaton parti apartman Siófokon" />
+  <meta property="og:title" content="Sunset Apartman | Balaton parti apartman Siófokon" />
   <meta property="og:description" content="Felújított, teljesen felszerelt apartman közvetlenül a Balaton partján, Siófok Ezüstparton." />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="images/apartman-00.jpg" />
@@ -43,6 +43,22 @@
       outline: 3px solid #1f1f1f;
       outline-offset: 4px;
     }
+
+    .brand-logo {
+      width: 44px;
+      height: 44px;
+      padding: 0;
+      overflow: hidden;
+      background: linear-gradient(180deg, #fff8df 0%, #f8d47a 100%);
+      border: 1px solid rgba(179, 129, 24, 0.35);
+      box-shadow: 0 8px 22px rgba(122, 82, 19, 0.16);
+    }
+
+    .brand-logo svg {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
   </style>
 </head>
 <body>
@@ -50,9 +66,28 @@
 
   <header class="site-header">
     <nav class="container nav" aria-label="Main navigation">
-      <a href="#top" class="brand" aria-label="Cirkáló Apartman kezdőlap">
-        <span class="brand-mark">CA</span>
-        <span data-i18n="brand.name">Cirkáló Apartman</span>
+      <a href="#top" class="brand" aria-label="Sunset Apartman kezdőlap">
+        <span class="brand-mark brand-logo" aria-hidden="true">
+          <svg viewBox="0 0 96 96" focusable="false" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="sunsetSky" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#fff4c7" />
+                <stop offset="100%" stop-color="#f0a23a" />
+              </linearGradient>
+              <linearGradient id="lakeWater" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="#3f9ec4" />
+                <stop offset="100%" stop-color="#0f6682" />
+              </linearGradient>
+            </defs>
+            <rect width="96" height="96" rx="24" fill="url(#sunsetSky)" />
+            <circle cx="48" cy="32" r="15" fill="#ffd36a" />
+            <path d="M15 55C27 48 37 48 49 55C61 62 72 62 84 55V76H15V55Z" fill="url(#lakeWater)" />
+            <path d="M21 60C33 54 44 54 56 60C65 64 74 65 84 61" fill="none" stroke="#ffe08a" stroke-width="4" stroke-linecap="round" />
+            <path d="M27 68C39 63 49 63 61 68C68 71 75 72 82 69" fill="none" stroke="#f7c65a" stroke-width="3" stroke-linecap="round" />
+            <text x="48" y="88" text-anchor="middle" font-size="18" font-family="Arial, sans-serif" font-weight="700" fill="#6b4a13">SA</text>
+          </svg>
+        </span>
+        <span data-i18n="brand.name">Sunset Apartman</span>
       </a>
 
       <div class="nav-right">
@@ -88,7 +123,7 @@
       </div>
 
       <div class="hero-media">
-        <img src="images/apartman-00.jpg" alt="Balatoni panoráma a Cirkáló Apartman erkélyéről" onerror="this.closest('.hero-media').classList.add('missing-image')" />
+        <img src="images/apartman-00.jpg" alt="Balatoni panoráma a Sunset Apartman erkélyéről" onerror="this.closest('.hero-media').classList.add('missing-image')" />
         <div class="hero-placeholder">
           <strong data-i18n="hero.photoPlaceholderTitle">Fő kép helye</strong>
           <span data-i18n="hero.photoPlaceholderText">Tedd ide: images/apartman-00.jpg</span>
@@ -116,7 +151,7 @@
           <p class="eyebrow" data-i18n="about.eyebrow">Áttekintés</p>
           <h2 data-i18n="about.title">Panoráma, vízpart és kényelmes balatoni pihenés</h2>
         </div>
-        <p data-i18n="about.text">A Cirkáló Apartman Siófokon, a Balatonszéplak–Ezüstpart városrészben található, egy liftes ház 5. emeletén, közvetlenül a Balaton partján. Ideális választás pároknak, családoknak és mindenkinek, aki tóparti környezetben szeretne kikapcsolódni.</p>
+        <p data-i18n="about.text">A Sunset Apartman Siófokon, a Balatonszéplak–Ezüstpart városrészben található, egy liftes ház 5. emeletén, közvetlenül a Balaton partján. Ideális választás pároknak, családoknak és mindenkinek, aki tóparti környezetben szeretne kikapcsolódni.</p>
       </div>
 
       <div class="grid-3">
@@ -182,8 +217,8 @@
         <figure><img src="images/apartman-05.jpg" data-swap-image data-alt-src="images/apartman-05b.jpg" tabindex="0" role="button" alt="Fürdőszoba" onerror="this.closest('figure').classList.add('missing-image')" /><figcaption data-i18n="gallery.cap5">Fürdőszoba</figcaption></figure>
         <figure><img src="images/apartman-06.jpg" data-swap-image data-alt-src="images/apartman-06b.jpg" tabindex="0" role="button" alt="Felszerelt konyha" onerror="this.closest('figure').classList.add('missing-image')" /><figcaption data-i18n="gallery.cap6">Felszerelt konyha</figcaption></figure>
         <figure><img src="images/apartman-07.jpg" data-swap-image data-alt-src="images/apartman-07b.jpg" tabindex="0" role="button" alt="Szabadstrand a ház előtt" onerror="this.closest('figure').classList.add('missing-image')" /><figcaption data-i18n="gallery.cap7">Szabadstrand a ház előtt</figcaption></figure>
-        <figure><img src="images/apartman-08.jpg" data-swap-image data-alt-src="images/apartman-08b.jpg" tabindex="0" role="button" alt="Sport a parton" data-l10n-alt="gallery.sportAlt" onerror="this.closest('figure').classList.add('missing-image')" /><figcaption data-l10n-extra="gallery.sport">Sport a parton</figcaption></figure>
-        <figure><img src="images/apartman-09.jpg" data-swap-image data-alt-src="images/apartman-09b.jpg" tabindex="0" role="button" alt="Naplemente a Balatonon" data-l10n-alt="gallery.sunsetAlt" onerror="this.closest('figure').classList.add('missing-image')" /><figcaption data-l10n-extra="gallery.sunset">Naplemente a vízen</figcaption></figure>
+        <figure><img src="images/apartman-08.jpg" data-swap-image data-alt-src="images/apartman-08b.jpg" tabindex="0" role="button" alt="Naplemente a Balatonon" data-l10n-alt="gallery.sunsetAlt" onerror="this.closest('figure').classList.add('missing-image')" /><figcaption data-l10n-extra="gallery.sunset">Naplemente a vízen</figcaption></figure>
+        <figure><img src="images/apartman-09.jpg" data-swap-image data-alt-src="images/apartman-09b.jpg" tabindex="0" role="button" alt="Sport a parton" data-l10n-alt="gallery.sportAlt" onerror="this.closest('figure').classList.add('missing-image')" /><figcaption data-l10n-extra="gallery.sport">Sport a parton</figcaption></figure>
       </div>
     </section>
  
@@ -269,7 +304,7 @@
       <div class="map-box">
         <div class="map-card">
           <h3 data-i18n="location.card.title">Balatonszéplak–Ezüstpart, Siófok</h3>
-          <p class="muted" data-i18n="location.card.text">Siófok Beach kb. 1,3 km, a Bebo Aquapark kb. 7,6 km, a Hévíz–Balaton Airport kb. 84 km távolságra található. A pontos címet foglaláskor vagy érdeklődéskor lehet egyeztetni.</p>
+          <p class="muted" data-i18n="location.card.text">Az Ezüstpart kb. 20 méterre található. Siófok Beach kb. 1,3 km, a Bebo Aquapark kb. 7,6 km, a Hévíz–Balaton Airport kb. 84 km távolságra található. A pontos címet foglaláskor vagy érdeklődéskor lehet egyeztetni.</p>
           <a class="btn btn-secondary" href="https://maps.google.com/?q=Siófok%20Ezüstpart" target="_blank" rel="noopener" data-i18n="location.button">Megnyitás térképen</a>
         </div>
       </div>
@@ -283,8 +318,12 @@
           <p class="muted" data-i18n="contact.text">Írd meg a kívánt dátumot, az éjszakák számát és az érkezők számát. A szabad időpontot, a végleges feltételeket és a közvetlen elérhetőséget válaszban egyeztetjük.</p>
         </div>
         <div class="contact-links">
-          <a href="mailto:cirkalo.apartman@example.com?subject=Cirkáló%20Apartman%20érdeklődés">
+          <a href="mailto:ftomy77@gmail.com?subject=Sunset%20Apartman%20érdeklődés">
             <span data-i18n="contact.email">Email küldése</span>
+            <span>→</span>
+          </a>
+          <a href="https://wa.me/36303233382?text=Kedves%20Sunset%20Apartman%2C%20%C3%A9rdekl%C5%91dn%C3%A9k%20az%20apartman%20ir%C3%A1nt." target="_blank" rel="noopener">
+            <span data-i18n="contact.whatsapp">WhatsApp üzenet</span>
             <span>→</span>
           </a>
         </div>
@@ -294,7 +333,7 @@
 
   <footer class="container footer">
     <div class="footer-inner">
-      <span>© <span id="year"></span> <span data-i18n="brand.name">Cirkáló Apartman</span></span>
+      <span>© <span id="year"></span> <span data-i18n="brand.name">Sunset Apartman</span></span>
       <span data-i18n="footer.note">Statikus GitHub Pages oldal</span>
     </div>
   </footer>

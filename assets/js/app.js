@@ -1,5 +1,5 @@
 /*
-  Cirkáló Apartman - fő működés
+  Sunset Apartman - fő működés
   - Nyelvváltás: HU / EN / DE / IT
   - Saját foglaltsági naptár kirajzolása
   - Aktuális év kiírása
@@ -7,10 +7,10 @@
 
 const translations = {
   "hu": {
-    "meta.title": "Cirkáló Apartman | Balaton parti apartman Siófokon",
+    "meta.title": "Sunset Apartman | Balaton parti apartman Siófokon",
     "meta.description": "Balaton parti, felújított apartman közvetlenül a vízparton Siófok Ezüstparton. Panorámás erkély, wifi, parkoló, teljes felszereltség.",
     "common.skip": "Ugrás a tartalomra",
-    "brand.name": "Cirkáló Apartman",
+    "brand.name": "Sunset Apartman",
     "nav.about": "Apartman",
     "nav.prices": "Árak",
     "nav.gallery": "Képek",
@@ -32,7 +32,7 @@ const translations = {
     "stats.parking.label": "Zárt udvari parkoló",
     "about.eyebrow": "Áttekintés",
     "about.title": "Panoráma, vízpart és kényelmes balatoni pihenés",
-    "about.text": "A Cirkáló Apartman Siófokon, a Balatonszéplak–Ezüstpart városrészben található, egy liftes ház 5. emeletén, közvetlenül a Balaton partján. Ideális választás pároknak, családoknak és mindenkinek, aki tóparti környezetben szeretne kikapcsolódni.",
+    "about.text": "A Sunset Apartman Siófokon, a Balatonszéplak–Ezüstpart városrészben található, egy liftes ház 5. emeletén, közvetlenül a Balaton partján. Ideális választás pároknak, családoknak és mindenkinek, aki tóparti környezetben szeretne kikapcsolódni.",
     "cards.panorama.title": "Balatoni panoráma",
     "cards.panorama.text": "A dupla erkélyről gyönyörű kilátás nyílik a Balatonra, esténként pedig a vízen tükröződő naplementét is élvezheted.",
     "cards.beach.title": "Közvetlen vízpart",
@@ -111,7 +111,7 @@ const translations = {
     "location.title": "Siófok, Ezüstpart – közvetlenül a Balatonnál",
     "location.text": "Az apartman a Balaton pezsgő, programokkal teli déli partján, csodás környezetben található. A vasútállomás körülbelül 800 méterre van, buszmegálló pedig a közelben található.",
     "location.card.title": "Balatonszéplak–Ezüstpart, Siófok",
-    "location.card.text": "Siófok Beach kb. 1,3 km, a Bebo Aquapark kb. 7,6 km, a Hévíz–Balaton Airport kb. 84 km távolságra található. A pontos címet foglaláskor vagy érdeklődéskor lehet egyeztetni.",
+    "location.card.text": "Az Ezüstpart kb. 20 méterre található. Siófok Beach kb. 1,3 km, a Bebo Aquapark kb. 7,6 km, a Hévíz–Balaton Airport kb. 84 km távolságra található. A pontos címet foglaláskor vagy érdeklődéskor lehet egyeztetni.",
     "location.button": "Megnyitás térképen",
     "contact.eyebrow": "Kapcsolat",
     "contact.title": "Érdekel az apartman?",
@@ -122,10 +122,10 @@ const translations = {
     "footer.note": "Statikus GitHub Pages oldal"
   },
   "en": {
-    "meta.title": "Cirkáló Apartment | Beachfront apartment in Siófok",
+    "meta.title": "Sunset Apartment | Beachfront apartment in Siófok",
     "meta.description": "Renovated beachfront apartment directly by Lake Balaton in Siófok Ezüstpart. Panoramic balcony, Wi-Fi, parking and full equipment.",
     "common.skip": "Skip to content",
-    "brand.name": "Cirkáló Apartment",
+    "brand.name": "Sunset Apartment",
     "nav.about": "Apartment",
     "nav.prices": "Prices",
     "nav.gallery": "Photos",
@@ -147,7 +147,7 @@ const translations = {
     "stats.parking.label": "Gated courtyard parking",
     "about.eyebrow": "Overview",
     "about.title": "Panorama, lakeside location and comfortable Balaton relaxation",
-    "about.text": "Cirkáló Apartment is located in Siófok, in the Balatonszéplak–Ezüstpart district, on the 5th floor of a building with an elevator, directly by Lake Balaton. It is ideal for couples, families and anyone who wants to relax in a lakeside environment.",
+    "about.text": "Sunset Apartment is located in Siófok, in the Balatonszéplak–Ezüstpart district, on the 5th floor of a building with an elevator, directly by Lake Balaton. It is ideal for couples, families and anyone who wants to relax in a lakeside environment.",
     "cards.panorama.title": "Lake Balaton panorama",
     "cards.panorama.text": "The double balcony offers a beautiful view of Lake Balaton, and in the evening you can enjoy the sunset reflected on the water.",
     "cards.beach.title": "Directly by the water",
@@ -226,7 +226,7 @@ const translations = {
     "location.title": "Siófok, Ezüstpart – directly by Lake Balaton",
     "location.text": "The apartment is in a beautiful setting on the lively southern shore of Lake Balaton, close to programs and services. The railway station is about 800 meters away, and a bus stop is also nearby.",
     "location.card.title": "Balatonszéplak–Ezüstpart, Siófok",
-    "location.card.text": "Siófok Beach is approx. 1.3 km away, Bebo Aquapark approx. 7.6 km, and Hévíz–Balaton Airport approx. 84 km. The exact address can be shared during booking or inquiry.",
+    "location.card.text": "Ezüstpart is approx. 20 meters away. Siófok Beach is approx. 1.3 km away, Bebo Aquapark approx. 7.6 km, and Hévíz–Balaton Airport approx. 84 km. The exact address can be shared during booking or inquiry.",
     "location.button": "Open map",
     "contact.eyebrow": "Contact",
     "contact.title": "Interested in the apartment?",
@@ -237,10 +237,10 @@ const translations = {
     "footer.note": "Static GitHub Pages site"
   },
   "de": {
-    "meta.title": "Cirkáló Apartment | Apartment direkt am Balaton in Siófok",
+    "meta.title": "Sunset Apartment | Apartment direkt am Balaton in Siófok",
     "meta.description": "Renoviertes Apartment direkt am Ufer des Balaton in Siófok Ezüstpart. Panoramabalkon, WLAN, Parkplatz und komplette Ausstattung.",
     "common.skip": "Zum Inhalt springen",
-    "brand.name": "Cirkáló Apartment",
+    "brand.name": "Sunset Apartment",
     "nav.about": "Apartment",
     "nav.prices": "Preise",
     "nav.gallery": "Bilder",
@@ -262,7 +262,7 @@ const translations = {
     "stats.parking.label": "Parkplatz im geschlossenen Hof",
     "about.eyebrow": "Überblick",
     "about.title": "Panorama, Balaton-Ufer und komfortable Erholung",
-    "about.text": "Das Cirkáló Apartment befindet sich in Siófok, im Stadtteil Balatonszéplak–Ezüstpart, im 5. Stock eines Hauses mit Aufzug, direkt am Balaton. Es ist ideal für Paare, Familien und alle, die in einer Umgebung am See entspannen möchten.",
+    "about.text": "Das Sunset Apartment befindet sich in Siófok, im Stadtteil Balatonszéplak–Ezüstpart, im 5. Stock eines Hauses mit Aufzug, direkt am Balaton. Es ist ideal für Paare, Familien und alle, die in einer Umgebung am See entspannen möchten.",
     "cards.panorama.title": "Balaton-Panorama",
     "cards.panorama.text": "Vom doppelten Balkon aus hast du einen schönen Blick auf den Balaton und kannst am Abend den Sonnenuntergang über dem Wasser genießen.",
     "cards.beach.title": "Direkt am Wasser",
@@ -341,7 +341,7 @@ const translations = {
     "location.title": "Siófok, Ezüstpart – direkt am Balaton",
     "location.text": "Das Apartment befindet sich in schöner Umgebung am lebendigen Südufer des Balaton, nahe an Programmen und Dienstleistungen. Der Bahnhof ist ca. 800 Meter entfernt, eine Bushaltestelle befindet sich ebenfalls in der Nähe.",
     "location.card.title": "Balatonszéplak–Ezüstpart, Siófok",
-    "location.card.text": "Siófok Beach ist ca. 1,3 km entfernt, Bebo Aquapark ca. 7,6 km und der Flughafen Hévíz–Balaton ca. 84 km. Die genaue Adresse kann bei Buchung oder Anfrage mitgeteilt werden.",
+    "location.card.text": "Der Ezüstpart ist ca. 20 Meter entfernt. Siófok Beach ist ca. 1,3 km entfernt, Bebo Aquapark ca. 7,6 km und der Flughafen Hévíz–Balaton ca. 84 km. Die genaue Adresse kann bei Buchung oder Anfrage mitgeteilt werden.",
     "location.button": "Karte öffnen",
     "contact.eyebrow": "Kontakt",
     "contact.title": "Interesse am Apartment?",
@@ -352,10 +352,10 @@ const translations = {
     "footer.note": "Statische GitHub Pages Seite"
   },
   "it": {
-    "meta.title": "Cirkáló Apartment | Appartamento fronte lago a Siófok",
+    "meta.title": "Sunset Apartment | Appartamento fronte lago a Siófok",
     "meta.description": "Appartamento ristrutturato direttamente sul Lago Balaton a Siófok Ezüstpart. Balcone panoramico, Wi‑Fi, parcheggio e dotazione completa.",
     "common.skip": "Vai al contenuto",
-    "brand.name": "Cirkáló Apartment",
+    "brand.name": "Sunset Apartment",
     "nav.about": "Appartamento",
     "nav.prices": "Prezzi",
     "nav.gallery": "Foto",
@@ -377,7 +377,7 @@ const translations = {
     "stats.parking.label": "Parcheggio nel cortile chiuso",
     "about.eyebrow": "Panoramica",
     "about.title": "Panorama, lago e relax confortevole sul Balaton",
-    "about.text": "Cirkáló Apartment si trova a Siófok, nel quartiere Balatonszéplak–Ezüstpart, al 5° piano di un edificio con ascensore, direttamente sulle rive del Lago Balaton. È ideale per coppie, famiglie e per chi desidera rilassarsi in un ambiente fronte lago.",
+    "about.text": "Sunset Apartment si trova a Siófok, nel quartiere Balatonszéplak–Ezüstpart, al 5° piano di un edificio con ascensore, direttamente sulle rive del Lago Balaton. È ideale per coppie, famiglie e per chi desidera rilassarsi in un ambiente fronte lago.",
     "cards.panorama.title": "Panorama sul Balaton",
     "cards.panorama.text": "Dal doppio balcone si gode una splendida vista sul Lago Balaton e la sera puoi ammirare il tramonto riflesso sull’acqua.",
     "cards.beach.title": "Direttamente sull’acqua",
@@ -456,7 +456,7 @@ const translations = {
     "location.title": "Siófok, Ezüstpart – direttamente sul Lago Balaton",
     "location.text": "L’appartamento si trova in un ambiente meraviglioso sulla vivace sponda sud del Lago Balaton, vicino a programmi e servizi. La stazione ferroviaria dista circa 800 metri e nelle vicinanze c’è anche una fermata dell’autobus.",
     "location.card.title": "Balatonszéplak–Ezüstpart, Siófok",
-    "location.card.text": "Siófok Beach dista circa 1,3 km, Bebo Aquapark circa 7,6 km e l’aeroporto Hévíz–Balaton circa 84 km. L’indirizzo esatto può essere condiviso durante la prenotazione o la richiesta.",
+    "location.card.text": "Ezüstpart dista circa 20 metri. Siófok Beach dista circa 1,3 km, Bebo Aquapark circa 7,6 km e l’aeroporto Hévíz–Balaton circa 84 km. L’indirizzo esatto può essere condiviso durante la prenotazione o la richiesta.",
     "location.button": "Apri la mappa",
     "contact.eyebrow": "Contatti",
     "contact.title": "Ti interessa l’appartamento?",
