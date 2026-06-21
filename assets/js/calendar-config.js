@@ -53,9 +53,9 @@ window.CIRKALO_AVAILABILITY = {
   // FOGALT IDŐSZAKOK - opcionális, akkor praktikus, ha több egymást követő nap foglalt.
   bookedRanges: [
     { from: "2026-06-22", to: "2026-07-05" },
-	{ from: "2026-07-09", to: "2026-07-13" },
+	{ from: "2026-07-09", to: "2026-07-12" },
 	{ from: "2026-07-17", to: "2026-07-26" },
-	{ from: "2026-08-02", to: "2026-08-16" },
+	{ from: "2026-08-04", to: "2026-08-16" },
 	{ from: "2026-08-20", to: "2026-08-24" }
   ]
 };
